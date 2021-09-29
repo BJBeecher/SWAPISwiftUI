@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Flux",
+        "repositoryURL": "https://github.com/BJBeecher/Flux.git",
+        "state": {
+          "branch": null,
+          "revision": "35707e1fed9261e5abfbf4583e3cc6ed42e5df5b",
+          "version": "0.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
