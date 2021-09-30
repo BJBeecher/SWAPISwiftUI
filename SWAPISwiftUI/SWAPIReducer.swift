@@ -12,6 +12,7 @@ func reduce(state: SWAPIState, action: FluxAction) -> SWAPIState {
     var newState = state
     
     newState = PeopleTab.reduce(state: newState, action: action)
+    newState = FilmsTab.reduce(state: newState, action: action)
     
     return newState
 }

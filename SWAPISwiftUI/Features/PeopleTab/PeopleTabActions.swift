@@ -32,10 +32,14 @@ extension PeopleTab.Actions {
         static var token : AnyCancellable?
         
         override func sideEffects(state: SWAPIState, env: SWAPIEnvironment, dispatch: @escaping FluxDispatch) {
-            Self.token = env.personRepo.getAll()
-                .map(PeopleLoadSuccessful.init)
-                .eraseError(using: PeopleLoadFailed.init)
-                .sink(receiveValue: dispatch)
+            Task {
+                do {
+                    let peoplePage = try await env.personRepo.getAll()
+                    dispatch(PeopleLoadSuccessful(peoplePage: peoplePage))
+                } catch {
+                    dispatch(PeopleLoadFailed(error: error))
+                }
+            }
         }
     }
     

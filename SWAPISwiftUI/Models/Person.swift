@@ -8,6 +8,7 @@
 import Foundation
 
 struct Person : Decodable, Equatable {
+    let url : URL
     let name : String
     let birthYear : String
     let eyeColor : String
@@ -21,11 +22,10 @@ struct Person : Decodable, Equatable {
     let species : Set<URL>
     let starships : Set<URL>
     let vehicles : Set<URL>
-    let url : URL
 }
 
 extension Person : Identifiable {
-    var id: String {
-        name
+    var id: URL {
+        url
     }
 }

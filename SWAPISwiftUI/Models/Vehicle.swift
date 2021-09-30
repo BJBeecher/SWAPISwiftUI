@@ -8,6 +8,7 @@
 import Foundation
 
 struct Vehicle : Decodable {
+    let url : URL
     let name : String
     let model : String
     let vehicleClass : String
@@ -21,4 +22,10 @@ struct Vehicle : Decodable {
     let consumables : String
     let films : [URL]
     let pilots : [URL]
+}
+
+extension Vehicle : Identifiable {
+    var id : URL {
+        url
+    }
 }

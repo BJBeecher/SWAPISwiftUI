@@ -17,18 +17,18 @@ extension PeopleTab {
                 state.app.peopleTab.loadState = .loading
                 
             case let action as Actions.PeopleLoadSuccessful:
-                var names = [String]()
+                var ids = [URL]()
                 
                 for person in action.peoplePage.results {
-                    let name = person.name
-                    names.append(name)
-                    state.domain.people[name] = person
+                    let id = person.id
+                    ids.append(id)
+                    state.domain.people[id] = person
                 }
                 
-                if let existingPeople = state.app.peopleTab.loadState.successValue {
-                    state.app.peopleTab.loadState = .success(existingPeople + names)
+                if let existingIds = state.app.peopleTab.loadState.successValue {
+                    state.app.peopleTab.loadState = .success(existingIds + ids)
                 } else {
-                    state.app.peopleTab.loadState = .success(names)
+                    state.app.peopleTab.loadState = .success(ids)
                 }
                 
                 state.app.peopleTab.nextURL = action.peoplePage.next

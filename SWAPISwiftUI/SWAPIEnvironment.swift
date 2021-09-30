@@ -10,13 +10,16 @@ import Flux
 
 final class SWAPIEnvironment : FluxEnvironment {
     let personRepo : PersonRepoInterface
+    let filmRepo : FilmRepoInterface
     
-    init(personRepo: PersonRepoInterface){
+    init(personRepo: PersonRepoInterface, filmRepo: FilmRepoInterface){
         self.personRepo = personRepo
+        self.filmRepo = filmRepo
     }
     
     convenience init() {
         let personRepo = PersonRepo()
-        self.init(personRepo: personRepo)
+        let filmRepo = FilmRepo()
+        self.init(personRepo: personRepo, filmRepo: filmRepo)
     }
 }

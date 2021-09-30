@@ -38,6 +38,13 @@
 		9284478D26FD4390002FC582 /* VehicleTabScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284478C26FD4390002FC582 /* VehicleTabScreenView.swift */; };
 		9284479026FD443E002FC582 /* FilmsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284478F26FD443E002FC582 /* FilmsTab.swift */; };
 		9284479226FD4453002FC582 /* FilmsTabScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284479126FD4453002FC582 /* FilmsTabScreenView.swift */; };
+		9292B8F02704E983008CB929 /* FilmsTabActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292B8EF2704E983008CB929 /* FilmsTabActions.swift */; };
+		9292B8F22704EA3D008CB929 /* FilmsTabReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292B8F12704EA3D008CB929 /* FilmsTabReducer.swift */; };
+		9292B8F42704EA99008CB929 /* FilmsTabAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292B8F32704EA99008CB929 /* FilmsTabAppState.swift */; };
+		9292B8F62704EAEA008CB929 /* FilmsTabScopeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292B8F52704EAEA008CB929 /* FilmsTabScopeState.swift */; };
+		9292B8F82704EB2B008CB929 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292B8F72704EB2B008CB929 /* Film.swift */; };
+		9292B8FA2704F168008CB929 /* FilmRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292B8F92704F168008CB929 /* FilmRepo.swift */; };
+		92A7D39C270526B60011B033 /* TabAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7D39B270526B60011B033 /* TabAppState.swift */; };
 		92CBDF9C26FFA12B0082B604 /* PersonTabRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBDF9B26FFA12B0082B604 /* PersonTabRowView.swift */; };
 		92CBDF9F26FFA2680082B604 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBDF9E26FFA2680082B604 /* URLImageView.swift */; };
 		92CBDFA126FFA4610082B604 /* URLImageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBDFA026FFA4610082B604 /* URLImageVM.swift */; };
@@ -77,6 +84,13 @@
 		9284478C26FD4390002FC582 /* VehicleTabScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTabScreenView.swift; sourceTree = "<group>"; };
 		9284478F26FD443E002FC582 /* FilmsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTab.swift; sourceTree = "<group>"; };
 		9284479126FD4453002FC582 /* FilmsTabScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTabScreenView.swift; sourceTree = "<group>"; };
+		9292B8EF2704E983008CB929 /* FilmsTabActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTabActions.swift; sourceTree = "<group>"; };
+		9292B8F12704EA3D008CB929 /* FilmsTabReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTabReducer.swift; sourceTree = "<group>"; };
+		9292B8F32704EA99008CB929 /* FilmsTabAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTabAppState.swift; sourceTree = "<group>"; };
+		9292B8F52704EAEA008CB929 /* FilmsTabScopeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTabScopeState.swift; sourceTree = "<group>"; };
+		9292B8F72704EB2B008CB929 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		9292B8F92704F168008CB929 /* FilmRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRepo.swift; sourceTree = "<group>"; };
+		92A7D39B270526B60011B033 /* TabAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabAppState.swift; sourceTree = "<group>"; };
 		92CBDF9B26FFA12B0082B604 /* PersonTabRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTabRowView.swift; sourceTree = "<group>"; };
 		92CBDF9E26FFA2680082B604 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		92CBDFA026FFA4610082B604 /* URLImageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageVM.swift; sourceTree = "<group>"; };
@@ -177,6 +191,7 @@
 				9284477426FD3FF3002FC582 /* Person.swift */,
 				92600AE62701F31500A35806 /* Vehicle.swift */,
 				9284477E26FD41B2002FC582 /* Page.swift */,
+				9292B8F72704EB2B008CB929 /* Film.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,6 +213,7 @@
 			children = (
 				9284477726FD4022002FC582 /* PersonRepo.swift */,
 				92600AE82701F3E200A35806 /* VehicleRepo.swift */,
+				9292B8F92704F168008CB929 /* FilmRepo.swift */,
 			);
 			path = Repos;
 			sourceTree = "<group>";
@@ -215,6 +231,7 @@
 			children = (
 				9284478126FD4204002FC582 /* Tab.swift */,
 				9284478326FD4216002FC582 /* TabScreenView.swift */,
+				92A7D39B270526B60011B033 /* TabAppState.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -236,6 +253,10 @@
 			children = (
 				9284478F26FD443E002FC582 /* FilmsTab.swift */,
 				9284479126FD4453002FC582 /* FilmsTabScreenView.swift */,
+				9292B8EF2704E983008CB929 /* FilmsTabActions.swift */,
+				9292B8F12704EA3D008CB929 /* FilmsTabReducer.swift */,
+				9292B8F32704EA99008CB929 /* FilmsTabAppState.swift */,
+				9292B8F52704EAEA008CB929 /* FilmsTabScopeState.swift */,
 			);
 			path = FilmsTab;
 			sourceTree = "<group>";
@@ -329,6 +350,7 @@
 				9284477826FD4022002FC582 /* PersonRepo.swift in Sources */,
 				9275CA9826FDFD9E00200DE4 /* LoadState.swift in Sources */,
 				92600AE72701F31500A35806 /* Vehicle.swift in Sources */,
+				9292B8FA2704F168008CB929 /* FilmRepo.swift in Sources */,
 				9284477326FD3F20002FC582 /* SWAPIReducer.swift in Sources */,
 				9284478D26FD4390002FC582 /* VehicleTabScreenView.swift in Sources */,
 				9284476F26FD3E8E002FC582 /* SWAPIState.swift in Sources */,
@@ -336,16 +358,21 @@
 				92600AED2701F64900A35806 /* VehicleTabActions.swift in Sources */,
 				92CBDFA32700CCD10082B604 /* ObservableObject.swift in Sources */,
 				92600AEB2701F5F100A35806 /* VehicleTabAppState.swift in Sources */,
+				9292B8F62704EAEA008CB929 /* FilmsTabScopeState.swift in Sources */,
 				9284476D26FD3E68002FC582 /* SWAPIStore.swift in Sources */,
+				92A7D39C270526B60011B033 /* TabAppState.swift in Sources */,
 				9284478426FD4216002FC582 /* TabScreenView.swift in Sources */,
 				9284478626FD4308002FC582 /* PeopleTab.swift in Sources */,
 				92600AE92701F3E200A35806 /* VehicleRepo.swift in Sources */,
+				9292B8F42704EA99008CB929 /* FilmsTabAppState.swift in Sources */,
 				9284477F26FD41B2002FC582 /* Page.swift in Sources */,
 				9275CA8E26FDFA3D00200DE4 /* PeopleTabActions.swift in Sources */,
 				9284477B26FD4054002FC582 /* LoggingMiddleware.swift in Sources */,
+				9292B8F02704E983008CB929 /* FilmsTabActions.swift in Sources */,
 				92600AEF2701F66500A35806 /* VehicleTabReducer.swift in Sources */,
 				9284479026FD443E002FC582 /* FilmsTab.swift in Sources */,
 				92CBDF9F26FFA2680082B604 /* URLImageView.swift in Sources */,
+				9292B8F82704EB2B008CB929 /* Film.swift in Sources */,
 				9284479226FD4453002FC582 /* FilmsTabScreenView.swift in Sources */,
 				92CBDF9C26FFA12B0082B604 /* PersonTabRowView.swift in Sources */,
 				9284478226FD4204002FC582 /* Tab.swift in Sources */,
@@ -353,6 +380,7 @@
 				9275CA9A26FE061400200DE4 /* PeopleTabScopeState.swift in Sources */,
 				9275CA9126FDFB6B00200DE4 /* Publisher.swift in Sources */,
 				9284477126FD3E96002FC582 /* SWAPIEnvironment.swift in Sources */,
+				9292B8F22704EA3D008CB929 /* FilmsTabReducer.swift in Sources */,
 				9284475826FD3D8B002FC582 /* SWAPISwiftUIApp.swift in Sources */,
 				92CBDFA126FFA4610082B604 /* URLImageVM.swift in Sources */,
 				9275CA9326FDFC2C00200DE4 /* PeopleTabReducer.swift in Sources */,
@@ -488,7 +516,7 @@
 				DEVELOPMENT_TEAM = UU5Z854A7H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SWAPISwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -510,7 +538,7 @@
 				DEVELOPMENT_TEAM = UU5Z854A7H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SWAPISwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -10,7 +10,7 @@ import Flux
 
 extension PeopleTab {
     struct AppState : FluxState {
-        var loadState = LoadState<[String]>.idle
+        var loadState = LoadState<[URL]>.idle
         var nextURL : URL?
         var previousURL : URL?
     }

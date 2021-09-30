@@ -17,6 +17,7 @@ extension SWAPIState {
     struct AppState : FluxState {
         var peopleTab = PeopleTab.AppState()
         var vehicleTab = VehicleTab.AppState()
+        var filmTab = FilmsTab.AppState()
     }
 }
 
@@ -24,7 +25,8 @@ extension SWAPIState {
 
 extension SWAPIState {
     struct DomainState : FluxState {
-        var people = [String : Person]()
-        var vehicles = [String : Vehicle]()
+        var people = [URL : Person]()
+        var vehicles = [URL : Vehicle]()
+        var films = [URL : Film]()
     }
 }
